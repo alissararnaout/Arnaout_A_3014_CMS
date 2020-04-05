@@ -29,6 +29,9 @@
 <body>
     
 <h2>Edit User</h2>
+
+<h3><a href="index.php">Admin Dashboard</a></h3>
+
     <?php echo !empty($message)? $message : '';?>
     <form action="admin_edituser.php" method="post">
         <?php while($info = $user->fetch(PDO::FETCH_ASSOC)): ?>

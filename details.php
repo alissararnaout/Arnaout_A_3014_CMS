@@ -28,7 +28,7 @@ if (isset($_GET['id'])) {
             <h2><?php echo $row['product_name']; ?></h2>
             <h4><?php echo $row['product_price']; ?></h4>
             <p><br> <?php echo $row['product_desc']; ?></p>
-            <a href="index.php">Back...</a>
+            <a href="index.php">Continue Shopping</a>
         <?php endwhile;?>
     <?php endif;?>
 

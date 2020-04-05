@@ -2,21 +2,6 @@
 require_once '../load.php';
 confirm_logged_in();
 
-$id = $_SESSION['user_id'];
-$user = getSingleUser($id);
-
-if (is_string($user)) {
-    $message = $user;
-}
-
-if (isset($_POST['submit'])) {
-    $fname = trim($_POST['fname']);
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
-    $email = trim($_POST['email']);
-
-    $message = editUser($fname, $username, $password, $email, $id);
-}
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -40,8 +25,8 @@ if (isset($_GET['id'])) {
     }
 }
 
-$categories_tbl = 'tbl_categories';
-$category = getAll($categories_tbl);
+$category_tbl = 'tbl_categories';
+$category = getAll($category_tbl);
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +37,8 @@ $category = getAll($categories_tbl);
     <title>Edit Product</title>
 </head>
 <body>
+
+<h3><a href="index.php">Admin Dashboard</a></h3>
 
 <?php echo !empty($message) ? $message : ''; ?>
    <form action="admin_editproduct.php?id=<?php echo $id ?>" method="POST" enctype="multipart/form-data">
@@ -78,8 +65,6 @@ $category = getAll($categories_tbl);
         <?php endwhile;?>
     </select>
         </div>
-        <div class="form-group">
-        <a href="index.php" class="btn btn-secondary">Cancel</a>
         <button type="submit" name="save">Save changes</button>
         <?php endwhile;?>
         </form>

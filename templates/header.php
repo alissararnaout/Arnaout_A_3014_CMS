@@ -15,12 +15,4 @@
         </ul>
     </nav>
 
-
-    <!-- search -->
-    <form action="search.php" method="GET">
-        <input type="search" name="search" required>
-        <button type="submit" value="Search">Search</button>
-    </form>
-
-
 </header>

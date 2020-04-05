@@ -31,10 +31,10 @@
     
     <form action="admin_login.php" method="post">
         <label for="username">Username:</label>
-        <input type="text" name="username" id="username" value="">
+        <input type="text" name="username" id="username" value=""><br>
 
         <label for="password">Password:</label>
-        <input type="password" name="password" id="password" value="">
+        <input type="password" name="password" id="password" value=""><br><br>
 
         <button name="submit">Submit</button>
     </form>

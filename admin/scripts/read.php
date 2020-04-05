@@ -45,11 +45,11 @@ function getProductsByFilter($args)
         return 'There was a problem accessing this info';
     }
 
-
-    function getProductsBySearch($query) {
+    // Search
+    function getProductsBySearch($keywords) {
         $pdo = Database::getInstance()->getConnection();
     
-        $search_query = 'SELECT * FROM tbl_products WHERE name LIKE "%'.$query.'%"';
+        $search_query = 'SELECT * FROM tbl_products WHERE name LIKE "%'.$keywords.'%"';
     
         $results = $pdo->query($search_query);
     
@@ -59,4 +59,7 @@ function getProductsByFilter($args)
             return 'There was a problem accessing this info';
         }
     }
+
+
 }
+?>

@@ -27,6 +27,7 @@ if (isset($_POST['add'])) {
     <title>Add Product</title>
 
     <h2>Add Product</h2>
+    <h3><a href="index.php">Admin Dashboard</a></h3>
 
     <?php echo !empty($message) ? $message : ''; ?>
     <form action="admin_addproduct.php" method="post" enctype="multipart/form-data">

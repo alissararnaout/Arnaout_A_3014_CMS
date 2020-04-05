@@ -17,8 +17,7 @@ function createUser($fname, $username, $password, $email){
             ':email'=>$email,
         )
     );
-    //TODO: redirect to index.php if creat user successfully
-    // otherwise, return a error message
+
     if($create_user_result){
         redirect_to('index.php');
     }else{
@@ -28,7 +27,6 @@ function createUser($fname, $username, $password, $email){
 
 function getSingleUser($id){
     $pdo = Database::getInstance()->getConnection();
-    //TODO: execute the proper SQL query to fetch the user data whose user_id = $id
     $get_user_query = 'SELECT * FROM tbl_user WHERE user_id = :id';
     $get_user_set = $pdo->prepare($get_user_query);
     $get_user_result = $get_user_set->execute(
@@ -37,8 +35,6 @@ function getSingleUser($id){
         )
     );
 
-    //TODO: if the execution is successful, return the user data
-    // Otherwise, return an error message
     if($get_user_result){
         return $get_user_set;
     }else{
@@ -77,11 +73,6 @@ function editUser($id, $fname, $username, $password, $email){
         )
     );
 
-    // echo $update_user_set->debugDumpParams();
-    // exit;
-
-    //TODO: if everything goes well, redirect user to index.php
-    // Otherwise, return some error message...
     if($update_user_result){
         redirect_to('index.php');
     }else{
@@ -99,8 +90,6 @@ function deleteUser($id){
         )
     );
 
-    //If everything went through, redirect to admin_deleteuser.php
-    //Otherwise, return false
     if($delete_user_result && $delete_user_set->rowCount() > 0){
         redirect_to('admin_deleteuser.php');
     }else{

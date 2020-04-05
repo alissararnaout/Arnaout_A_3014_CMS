@@ -28,7 +28,9 @@ if(isset($_GET['id'])){
 </head>
 <body>
     
-<h2>Delete User(s)...</h2>
+<h2>Delete User(s)</h2>
+<h3><a href="index.php">Admin Dashboard</a></h3>
+
     <?php echo !empty($message)?$message:'';?>
     <table>
         <thead>

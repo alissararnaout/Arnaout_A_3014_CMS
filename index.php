@@ -18,16 +18,12 @@ if (isset($_GET['filter'])) {
     $getProducts = getAll($product_table);
 }
 
-// search
-if(isset($_GET['query'])) {
-    $query = $_GET['query'];
 
-    $getProducts = getProductsBySearch($query);
+if(isset($_GET['keywords'])) {
+    $keywords = $_GET['keywords'];
+
+    $getProducts = getProductsBySearch($keywords);
 }
-
-$number_cols = 3;
-$col_width = 12 / $number_cols;
-$row_count = 0;
 
 ?>
 
@@ -41,13 +37,19 @@ $row_count = 0;
 <body>
     <?php include 'templates/header.php';?>
 
+     <!-- search -->
+     <form action="search.php" method="GET">
+        <input type="search" name="keywords" autocomplete="off">
+        <button type="submit" value="Search">Search</button>
+    </form>
+
     <?php while ($row = $getProducts->fetch(PDO::FETCH_ASSOC)): ?>
 
     <div class="product-item">
         <img src="images/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_name']; ?>">
         <h2><?php echo $row['product_name']; ?></h2>
             <h4><?php echo $row['product_price']; ?></h4>
-            <a href="details.php?id=<?php echo $row['product_id']; ?>">Read More...</a>
+            <a href="details.php?id=<?php echo $row['product_id']; ?>">Product Details</a>
     </div>
     <?php endwhile; ?>
 

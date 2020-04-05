@@ -99,24 +99,21 @@
 }
 
 // delete product
-function deleteProduct($product_id)
-{
+function deleteProduct($id){
     $pdo = Database::getInstance()->getConnection();
-
-    $delete_product_query = 'DELETE FROM tbl_products WHERE product_ID = :id';
+    $delete_product_query = 'DELETE FROM tbl_products WHERE product_id = :id';
     $delete_product_set = $pdo->prepare($delete_product_query);
     $delete_product_result = $delete_product_set->execute(
         array(
-            ':id' => $product_id,
+            ':id'=>$id
         )
     );
 
-    if ($delete_product_result && $delete_product_set->rowCount() > 0) {
-        redirect_to('index.php');
-    } else {
+    if($delete_product_result && $delete_product_set->rowCount() > 0){
+        redirect_to('admin_deleteproduct.php');
+    }else{
         return false;
     }
-
 }
 
 }

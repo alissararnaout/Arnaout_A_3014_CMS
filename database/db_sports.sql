@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 05, 2020 at 07:47 AM
+-- Generation Time: Apr 05, 2020 at 05:02 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -125,7 +125,32 @@ INSERT INTO `tbl_product_cat` (`product_cat_id`, `product_id`, `category_id`) VA
 (7, 7, 2),
 (8, 8, 2),
 (9, 9, 2),
-(10, 10, 2);
+(10, 10, 2),
+(11, 11, 3),
+(12, 12, 3),
+(13, 13, 3),
+(14, 14, 3),
+(15, 15, 3),
+(16, 16, 4),
+(17, 17, 4),
+(18, 18, 4),
+(19, 19, 4),
+(20, 20, 4),
+(21, 21, 5),
+(22, 22, 5),
+(23, 23, 5),
+(24, 24, 5),
+(25, 25, 5),
+(26, 26, 6),
+(27, 27, 6),
+(28, 28, 6),
+(29, 29, 6),
+(30, 30, 6),
+(31, 31, 7),
+(32, 32, 7),
+(33, 33, 7),
+(34, 34, 7),
+(35, 35, 7);
 
 -- --------------------------------------------------------
 
@@ -148,7 +173,7 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_ip`) VALUES
 (1, 'Admin', 'admin', 'sportcheck', 'admin@sportcheck', '::1'),
-(2, 'Alissar', 'aarnaout', 'password', 'alissar@arnaout.com', 'no');
+(2, 'Alissar', 'aarnaout', 'password', 'alissar@arnaout.com', '::1');
 
 --
 -- Indexes for dumped tables
@@ -198,7 +223,7 @@ ALTER TABLE `tbl_products`
 -- AUTO_INCREMENT for table `tbl_product_cat`
 --
 ALTER TABLE `tbl_product_cat`
-  MODIFY `product_cat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `product_cat_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`

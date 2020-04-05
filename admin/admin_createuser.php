@@ -26,6 +26,9 @@
 </head>
 <body>
     <h2>Create User</h2>
+
+    <h3><a href="index.php">Admin Dashboard</a></h3>
+
         <?php echo !empty($message)? $message: ''; ?>
         <form action="admin_createuser.php" method="post">
             <label>First Name</label>
