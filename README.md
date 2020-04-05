@@ -16,9 +16,9 @@ git clone https://github.com/alissararnaout/Arnaout_A_3014_CMS.git
 ```
 
 Import the database from /database directory to your MAMP or WAMP.
-```
 
 run this application on your localhost for MAMP or WAMP
+
 ```
 e.g. localhost:8888
 ```
