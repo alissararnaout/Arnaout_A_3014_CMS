@@ -8,6 +8,7 @@ if (isset($_GET['id'])) {
     $getProduct = getSingleProduct($tbl, $col, $id);
 }
 
+
 ?>
 
 <!DOCTYPE html>

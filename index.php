@@ -1,6 +1,7 @@
 <?php
 require_once 'load.php';
 
+// filter
 if (isset($_GET['filter'])) {
     $args = array(
         'tbl' => 'tbl_products',
@@ -16,6 +17,17 @@ if (isset($_GET['filter'])) {
     $product_table = 'tbl_products';
     $getProducts = getAll($product_table);
 }
+
+// search
+if(isset($_GET['keywords'])) {
+    $keywords = $_GET['keywords'];
+
+    $getProducts = getProductsBySearch($keywords);
+}
+
+$number_cols = 3;
+$col_width = 12 / $number_cols;
+$row_count = 0;
 
 ?>
 

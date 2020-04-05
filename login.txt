@@ -1,4 +1,6 @@
 LOGIN CREDENTIALS
 
+username: admin
+password: sportcheck
 
 

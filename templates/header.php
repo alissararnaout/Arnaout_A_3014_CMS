@@ -12,4 +12,13 @@
             <li><a href="index.php">All</a></li>
         </ul>
     </nav>
+
+
+    <!-- search -->
+    <form method="get" action="search.php">
+                <input type="search" name="search" autocomplete="off">
+                    <button type="submit">Search</button>
+            </form>
+
+
 </header>
