@@ -24,6 +24,7 @@
     <title>Login</title>
 </head>
 <body>
+    <h1><a href="../index.php">SportCheck</a></h1>
     <h2>Login</h2>
 
     <?php echo !empty($message)? $message: ''; ?>

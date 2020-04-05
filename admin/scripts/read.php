@@ -46,10 +46,10 @@ function getProductsByFilter($args)
     }
 
 
-    function getProductsBySearch($keywords) {
+    function getProductsBySearch($query) {
         $pdo = Database::getInstance()->getConnection();
     
-        $search_query = 'SELECT * FROM tbl_products WHERE name LIKE "%'.$keywords.'%"';
+        $search_query = 'SELECT * FROM tbl_products WHERE name LIKE "%'.$query.'%"';
     
         $results = $pdo->query($search_query);
     

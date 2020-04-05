@@ -19,10 +19,10 @@ if (isset($_GET['filter'])) {
 }
 
 // search
-if(isset($_GET['keywords'])) {
-    $keywords = $_GET['keywords'];
+if(isset($_GET['query'])) {
+    $query = $_GET['query'];
 
-    $getProducts = getProductsBySearch($keywords);
+    $getProducts = getProductsBySearch($query);
 }
 
 $number_cols = 3;

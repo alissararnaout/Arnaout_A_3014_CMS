@@ -8,8 +8,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Sportcheck - Dashboard</title>
 
+    <h1><a href="../index.php">SportCheck</a></h1>
     <h2>Welcome! <?php echo $_SESSION['user_name'];?></h2>
     
     <a href="admin_createuser.php">Create User</a>

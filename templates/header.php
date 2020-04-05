@@ -1,5 +1,7 @@
 <header>
-    <h2>SportCheck CMS</h2>
+    <h1><a href="index.php">SportCheck</a></h1>
+
+    <a href="admin/admin_login.php">Login</a>
     <nav class="filterNav">
         <ul>
             <li><a href="index.php?filter=men">Men</a></li>
@@ -15,10 +17,10 @@
 
 
     <!-- search -->
-    <form method="get" action="search.php">
-                <input type="search" name="search" autocomplete="off">
-                    <button type="submit">Search</button>
-            </form>
+    <form action="search.php" method="GET">
+        <input type="search" name="search" required>
+        <button type="submit" value="Search">Search</button>
+    </form>
 
 
 </header>
