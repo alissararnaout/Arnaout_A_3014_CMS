@@ -27,7 +27,8 @@ if (isset($_GET['filter'])) {
     <title>SportsCheck CMS</title>
 </head>
 <body>
-    
+    <?php include 'templates/header.php';?>
+
     <?php while ($row = $getProducts->fetch(PDO::FETCH_ASSOC)): ?>
 
     <div class="product-item">

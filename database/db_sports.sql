@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 04, 2020 at 11:05 PM
+-- Generation Time: Apr 05, 2020 at 03:56 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -114,7 +114,7 @@ CREATE TABLE `tbl_user` (
   `user_name` varchar(25) NOT NULL,
   `user_pass` varchar(20) NOT NULL,
   `user_email` varchar(50) NOT NULL,
-  `user_ip` varchar(40) NOT NULL
+  `user_ip` varchar(40) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -122,7 +122,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_ip`) VALUES
-(1, 'alissar', 'alissar', '123', 'alissar@arnaout.com', '');
+(1, 'Admin', 'admin', 'sportcheck', 'admin@sportcheck', '::1'),
+(2, 'Alissar', 'aarnaout', 'password', 'alissar@arnaout.com', 'no');
 
 --
 -- Indexes for dumped tables
@@ -178,7 +179,7 @@ ALTER TABLE `tbl_product_cat`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
