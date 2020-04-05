@@ -6,12 +6,12 @@ $category_table = 'tbl_categories';
 $categories     = getAll($category_table);
 
 if (isset($_POST['add'])) {
-    $movie = array(
+    $product = array(
         'image'   => $_FILES['image'],
         'name'   => trim($_POST['name']),
         'price'    => trim($_POST['price']),
         'description'   => trim($_POST['description']),
-        'category'   => trim($_POST['categoryList']),
+        'category'   => trim($_POST['category']),
     );
 
     $result  = addProduct($product);
@@ -26,8 +26,10 @@ if (isset($_POST['add'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
 
+    <h2>Add Product</h2>
+
     <?php echo !empty($message) ? $message : ''; ?>
-    <form action="admin_addmovie.php" method="post" enctype="multipart/form-data">
+    <form action="admin_addproduct.php" method="post" enctype="multipart/form-data">
         <label>Product Image:</label><br>
         <input type="file" name="image" value=""><br><br>
 
@@ -41,7 +43,7 @@ if (isset($_POST['add'])) {
         <textarea name="description"></textarea><br><br>
 
         <label>Product Category:</label><br>
-        <select name="categoryList">
+        <select name="category">
             <option>Select a product category</option>
             <?php while ($row = $categories->fetch(PDO::FETCH_ASSOC)): ?>
                 <option value="<?php echo $row['category_id'] ?>"><?php echo $row['category_name']; ?></option>
