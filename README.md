@@ -1,9 +1,7 @@
 # Arnaout_A_3014_CMS
 
 ### Description
-This is a Content Management System for SportCheck.
-
-Built using PHP and MySQL
+This is a Content Management System for SportCheck built using PHP and MySQL
 
 ### Pre-requisites
 To get this project running successfully, you will need MAMP or WAMP.
