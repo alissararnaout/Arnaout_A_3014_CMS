@@ -43,7 +43,7 @@ $category = getAll($category_tbl);
 <?php echo !empty($message) ? $message : ''; ?>
    <form action="admin_editproduct.php?id=<?php echo $id ?>" method="POST" enctype="multipart/form-data">
 
-   <?php while ($info = $getProduct->fetch(PDO::FETCH_ASSOC)): ?>
+   <?php while ($info = $category->fetch(PDO::FETCH_ASSOC)): ?>
 
     <label>Product Image:</label>
     <input type="file" name="image" value="<?php echo $info['image']; ?>">
