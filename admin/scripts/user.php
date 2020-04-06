@@ -3,8 +3,6 @@
 function createUser($fname, $username, $password, $email){
     $pdo = Database::getInstance()->getConnection();
     
-    //TODO: finish the below so that it can run a SQL query
-    // to create a new user with provided data
     $create_user_query = 'INSERT INTO tbl_user(user_fname, user_name, user_pass, user_email, user_ip)';
     $create_user_query .= ' VALUES(:fname, :username, :password, :email, "no" )';
 
@@ -56,10 +54,8 @@ function getAllUsers(){
 }
 
 function editUser($id, $fname, $username, $password, $email){
-    //TODO: set up database connection
     $pdo = Database::getInstance()->getConnection();
 
-    //TODO: Run the proper SQL query to update tbl_user with proper values
     $update_user_query = 'UPDATE tbl_user SET user_fname = :fname, user_name = :username,';
     $update_user_query .= ' user_pass=:password, user_email =:email WHERE user_id = :id';
     $update_user_set = $pdo->prepare($update_user_query);
